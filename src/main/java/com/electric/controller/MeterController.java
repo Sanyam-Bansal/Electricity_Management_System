@@ -47,11 +47,10 @@ public class MeterController {
 	@PostMapping
 	@ApiOperation(value = "Create a new meter", notes = "Creates a new meter entity.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Meter created successfully") })
-	public Meter createMeter(@Valid @RequestBody Meter meter) {
-//		return meterService.saveMeter(meter);
+	public ResponseEntity<Meter> createMeter(@Valid @RequestBody Meter meter) {
 		Meter createdMeter = meterService.saveMeter(meter);
 		logger.info("Created meter with ID: {}", createdMeter.getMeterId());
-		return createdMeter;
+		return new ResponseEntity<>(createdMeter , HttpStatus.OK);
 
 	}
 
@@ -86,11 +85,11 @@ public class MeterController {
 	@ApiOperation(value = "Update a meter", notes = "Updates an existing meter entity.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Meter updated successfully"),
 			@ApiResponse(code = 404, message = "Meter not found") })
-	public Meter updateMeter(@PathVariable long meterId, @RequestBody Meter meter) {
+	public ResponseEntity<Meter> updateMeter(@PathVariable long meterId, @RequestBody Meter meter) {
 		try {
 			Meter updatedMeter = meterService.updateMeter(meterId, meter);
 			logger.info("Updated meter with ID: {}", meterId);
-			return updatedMeter;
+			return new ResponseEntity<>(updatedMeter , HttpStatus.OK);
 		} catch (NoSuchElementException e) {
 			logger.error("Meter not found with ID: {}", meterId);
 			throw e;
@@ -107,10 +106,10 @@ public class MeterController {
 	@ApiOperation(value = "Delete a meter", notes = "Deletes a meter entity by its ID.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Meter deleted successfully"),
 			@ApiResponse(code = 404, message = "Meter not found") })
-	public String deleteMeter(@PathVariable long meterId) {
+	public ResponseEntity<String> deleteMeter(@PathVariable long meterId) {
 		meterService.deleteMeter(meterId);
 		logger.info("Deleted meter with ID: {}", meterId);
-		return "Meter with id: " + meterId + " is successfully deleted";
+		return new ResponseEntity<>("Meter with id: " + meterId + " is successfully deleted" , HttpStatus.OK);
 	}
 
 }
