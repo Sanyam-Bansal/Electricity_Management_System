@@ -1051,3 +1051,314 @@ java.lang.RuntimeException: Internal Server Error
 2023-07-25 12:03:05.281  INFO 14764 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-25 12:03:05.283  INFO 14764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-07-25 12:03:05.292  INFO 14764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:06:06.896  INFO 2376 --- [main] c.e.I.CustomerControllerIntegrationTest  : Starting CustomerControllerIntegrationTest using Java 17.0.8 on GEMGN-210255 with PID 2376 (started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:06:06.911 DEBUG 2376 --- [main] c.e.I.CustomerControllerIntegrationTest  : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:06:06.912  INFO 2376 --- [main] c.e.I.CustomerControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:06:09.487  INFO 2376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:06:09.605  INFO 2376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:06:11.192  INFO 2376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-08-23 15:06:11.203  INFO 2376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:06:11.203  INFO 2376 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:06:11.421  INFO 2376 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:06:11.422  INFO 2376 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4404 ms
+2023-08-23 15:06:11.715  INFO 2376 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:06:11.716  INFO 2376 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:06:11.717  INFO 2376 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:06:11.727  INFO 2376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:06:11.972  INFO 2376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:06:11.988  INFO 2376 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:50308/testdb (PostgreSQL 15.4)
+2023-08-23 15:06:12.025  INFO 2376 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:06:12.029  INFO 2376 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.017s)
+2023-08-23 15:06:12.044  INFO 2376 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:06:12.134  INFO 2376 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:06:12.145  INFO 2376 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:06:12.195  INFO 2376 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:06:12.213  INFO 2376 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.090s)
+2023-08-23 15:06:12.498  INFO 2376 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:06:12.628  INFO 2376 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:06:13.027  INFO 2376 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:06:13.246  INFO 2376 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:06:14.305  INFO 2376 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:06:14.314  INFO 2376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:06:15.488  WARN 2376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:06:15.793  INFO 2376 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:06:16.649  INFO 2376 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50319 (http) with context path ''
+2023-08-23 15:06:16.651  INFO 2376 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:06:16.695  INFO 2376 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:06:16.747  INFO 2376 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:06:16.960  INFO 2376 --- [main] c.e.I.CustomerControllerIntegrationTest  : Started CustomerControllerIntegrationTest in 10.897 seconds (JVM running for 25.191)
+2023-08-23 15:06:17.609  INFO 2376 --- [http-nio-auto-1-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 15:06:17.610  INFO 2376 --- [http-nio-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-23 15:06:17.611  INFO 2376 --- [http-nio-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-23 15:06:17.800  INFO 2376 --- [http-nio-auto-1-exec-3] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:06:17.811  INFO 2376 --- [http-nio-auto-1-exec-3] c.e.controller.CustomerController        : Created customer with ID: 1
+2023-08-23 15:06:17.959  INFO 2376 --- [http-nio-auto-1-exec-4] c.e.controller.CustomerController        : Deleted customer with ID: 1
+2023-08-23 15:06:17.989  INFO 2376 --- [http-nio-auto-1-exec-7] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:06:17.997  INFO 2376 --- [http-nio-auto-1-exec-7] c.e.controller.CustomerController        : Created customer with ID: 2
+2023-08-23 15:06:18.026  INFO 2376 --- [http-nio-auto-1-exec-8] c.e.serviceImpl.CustomerServiceImpl      : Retrieving customer by ID: 2
+2023-08-23 15:06:18.026  INFO 2376 --- [http-nio-auto-1-exec-8] c.e.controller.CustomerController        : Retrieved customer by ID: 2
+2023-08-23 15:06:18.066  INFO 2376 --- [http-nio-auto-1-exec-1] c.e.controller.CustomerController        : Deleted customer with ID: 2
+2023-08-23 15:06:20.189  INFO 2376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:06:20.191  INFO 2376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23 15:06:20.194  INFO 2376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:08:54.094  INFO 5536 --- [main] c.e.I.CustomerControllerIntegrationTest  : Starting CustomerControllerIntegrationTest using Java 17.0.8 on GEMGN-210255 with PID 5536 (started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:08:54.095 DEBUG 5536 --- [main] c.e.I.CustomerControllerIntegrationTest  : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:08:54.096  INFO 5536 --- [main] c.e.I.CustomerControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:08:55.005  INFO 5536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:08:55.087  INFO 5536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:08:55.775  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-08-23 15:08:55.785  INFO 5536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:08:55.785  INFO 5536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:08:55.932  INFO 5536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:08:55.932  INFO 5536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1813 ms
+2023-08-23 15:08:56.175  INFO 5536 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:08:56.176  INFO 5536 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:08:56.176  INFO 5536 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:08:56.189  INFO 5536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:08:56.407  INFO 5536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:08:56.425  INFO 5536 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:50375/testdb (PostgreSQL 15.4)
+2023-08-23 15:08:56.467  INFO 5536 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:08:56.472  INFO 5536 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.021s)
+2023-08-23 15:08:56.490  INFO 5536 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:08:56.551  INFO 5536 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:08:56.562  INFO 5536 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:08:56.598  INFO 5536 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:08:56.618  INFO 5536 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.077s)
+2023-08-23 15:08:56.738  INFO 5536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:08:56.795  INFO 5536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:08:56.942  INFO 5536 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:08:57.032  INFO 5536 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:08:57.690  INFO 5536 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:08:57.698  INFO 5536 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:08:58.519  WARN 5536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:08:58.772  INFO 5536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:08:59.358  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50390 (http) with context path ''
+2023-08-23 15:08:59.360  INFO 5536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:08:59.379  INFO 5536 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:08:59.408  INFO 5536 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:08:59.552  INFO 5536 --- [main] c.e.I.CustomerControllerIntegrationTest  : Started CustomerControllerIntegrationTest in 5.807 seconds (JVM running for 20.028)
+2023-08-23 15:08:59.910  INFO 5536 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 15:08:59.911  INFO 5536 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-23 15:08:59.912  INFO 5536 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-23 15:09:00.076  INFO 5536 --- [http-nio-auto-1-exec-1] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:09:00.088  INFO 5536 --- [http-nio-auto-1-exec-1] c.e.controller.CustomerController        : Created customer with ID: 1
+2023-08-23 15:09:00.186  INFO 5536 --- [http-nio-auto-1-exec-2] c.e.serviceImpl.CustomerServiceImpl      : Retrieving customer by ID: 1
+2023-08-23 15:09:00.186  INFO 5536 --- [http-nio-auto-1-exec-2] c.e.controller.CustomerController        : Retrieved customer by ID: 1
+2023-08-23 15:09:00.230  INFO 5536 --- [http-nio-auto-1-exec-3] c.e.controller.CustomerController        : Deleted customer with ID: 1
+2023-08-23 15:09:00.255  INFO 5536 --- [http-nio-auto-1-exec-4] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:09:00.317  INFO 5536 --- [http-nio-auto-1-exec-4] c.e.controller.CustomerController        : Created customer with ID: 2
+2023-08-23 15:09:00.361  INFO 5536 --- [http-nio-auto-1-exec-5] c.e.serviceImpl.CustomerServiceImpl      : Calculating bill for customer. Customer ID: 2, Bill Amount: 500.0
+2023-08-23 15:09:00.362  INFO 5536 --- [http-nio-auto-1-exec-5] c.e.controller.CustomerController        : Calculated bill for customer with ID: 2
+2023-08-23 15:09:05.182  INFO 5536 --- [http-nio-auto-1-exec-6] c.e.controller.CustomerController        : Deleted customer with ID: 2
+2023-08-23 15:09:07.114  INFO 5536 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:09:07.117  INFO 5536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23 15:09:07.121  INFO 5536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:24:59.809  INFO 18980 --- [main] c.e.I.CustomerControllerIntegrationTest  : Starting CustomerControllerIntegrationTest using Java 17.0.8 on GEMGN-210255 with PID 18980 (started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:24:59.811 DEBUG 18980 --- [main] c.e.I.CustomerControllerIntegrationTest  : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:24:59.812  INFO 18980 --- [main] c.e.I.CustomerControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:25:00.648  INFO 18980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:25:00.730  INFO 18980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:25:01.472  INFO 18980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-08-23 15:25:01.486  INFO 18980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:25:01.487  INFO 18980 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:25:01.615  INFO 18980 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:25:01.615  INFO 18980 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1775 ms
+2023-08-23 15:25:01.891  INFO 18980 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:25:01.892  INFO 18980 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:25:01.893  INFO 18980 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:25:01.913  INFO 18980 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:25:02.128  INFO 18980 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:25:02.149  INFO 18980 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:50830/testdb (PostgreSQL 15.4)
+2023-08-23 15:25:02.198  INFO 18980 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:25:02.204  INFO 18980 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.024s)
+2023-08-23 15:25:02.226  INFO 18980 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:25:02.307  INFO 18980 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:25:02.316  INFO 18980 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:25:02.344  INFO 18980 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:25:02.360  INFO 18980 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.102s)
+2023-08-23 15:25:02.495  INFO 18980 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:25:02.551  INFO 18980 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:25:02.723  INFO 18980 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:25:02.810  INFO 18980 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:25:03.482  INFO 18980 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:25:03.492  INFO 18980 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:25:04.326  WARN 18980 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:25:04.584  INFO 18980 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:25:05.225  INFO 18980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50841 (http) with context path ''
+2023-08-23 15:25:05.227  INFO 18980 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:25:05.254  INFO 18980 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:25:05.286  INFO 18980 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:25:05.447  INFO 18980 --- [main] c.e.I.CustomerControllerIntegrationTest  : Started CustomerControllerIntegrationTest in 5.966 seconds (JVM running for 21.236)
+2023-08-23 15:25:05.962  INFO 18980 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 15:25:05.962  INFO 18980 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-23 15:25:05.963  INFO 18980 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-23 15:25:06.103  INFO 18980 --- [http-nio-auto-1-exec-1] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:25:06.120  INFO 18980 --- [http-nio-auto-1-exec-1] c.e.controller.CustomerController        : Created customer with ID: 1
+2023-08-23 15:25:06.326  INFO 18980 --- [http-nio-auto-1-exec-2] c.e.serviceImpl.CustomerServiceImpl      : Updating customer. Customer ID: 1
+2023-08-23 15:25:06.354  INFO 18980 --- [http-nio-auto-1-exec-2] c.e.controller.CustomerController        : Updated customer with ID: 1
+2023-08-23 15:25:06.422  INFO 18980 --- [http-nio-auto-1-exec-3] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:25:06.434  INFO 18980 --- [http-nio-auto-1-exec-3] c.e.controller.CustomerController        : Created customer with ID: 2
+2023-08-23 15:25:06.463  INFO 18980 --- [http-nio-auto-1-exec-4] c.e.serviceImpl.CustomerServiceImpl      : Retrieving customer by ID: 2
+2023-08-23 15:25:06.464  INFO 18980 --- [http-nio-auto-1-exec-4] c.e.controller.CustomerController        : Retrieved customer by ID: 2
+2023-08-23 15:25:06.505  INFO 18980 --- [http-nio-auto-1-exec-5] c.e.controller.CustomerController        : Deleted customer with ID: 2
+2023-08-23 15:25:06.530  INFO 18980 --- [http-nio-auto-1-exec-6] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:25:06.537  INFO 18980 --- [http-nio-auto-1-exec-6] c.e.controller.CustomerController        : Created customer with ID: 3
+2023-08-23 15:25:06.569  INFO 18980 --- [http-nio-auto-1-exec-7] c.e.serviceImpl.CustomerServiceImpl      : Calculating bill for customer. Customer ID: 3, Bill Amount: 500.0
+2023-08-23 15:25:06.570  INFO 18980 --- [http-nio-auto-1-exec-7] c.e.controller.CustomerController        : Calculated bill for customer with ID: 3
+2023-08-23 15:25:11.159  INFO 18980 --- [http-nio-auto-1-exec-8] c.e.controller.CustomerController        : Deleted customer with ID: 3
+2023-08-23 15:25:13.258  INFO 18980 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:25:13.260  INFO 18980 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23 15:25:13.266  INFO 18980 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:32:12.845  INFO 12900 --- [main] c.e.I.CustomerControllerIntegrationTest  : Starting CustomerControllerIntegrationTest using Java 17.0.8 on GEMGN-210255 with PID 12900 (started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:32:12.847 DEBUG 12900 --- [main] c.e.I.CustomerControllerIntegrationTest  : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:32:12.847  INFO 12900 --- [main] c.e.I.CustomerControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:32:13.629  INFO 12900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:32:13.731  INFO 12900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:32:14.496  INFO 12900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-08-23 15:32:14.507  INFO 12900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:32:14.508  INFO 12900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:32:14.640  INFO 12900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:32:14.640  INFO 12900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1774 ms
+2023-08-23 15:32:14.923  INFO 12900 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:32:14.924  INFO 12900 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:32:14.924  INFO 12900 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:32:14.939  INFO 12900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:32:15.130  INFO 12900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:32:15.146  INFO 12900 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:50936/testdb (PostgreSQL 15.4)
+2023-08-23 15:32:15.191  INFO 12900 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:32:15.197  INFO 12900 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.021s)
+2023-08-23 15:32:15.223  INFO 12900 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:32:15.315  INFO 12900 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:32:15.326  INFO 12900 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:32:15.364  INFO 12900 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:32:15.384  INFO 12900 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.080s)
+2023-08-23 15:32:15.516  INFO 12900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:32:15.562  INFO 12900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:32:15.724  INFO 12900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:32:15.811  INFO 12900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:32:16.474  INFO 12900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:32:16.483  INFO 12900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:32:17.389  WARN 12900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:32:17.629  INFO 12900 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:32:18.251  INFO 12900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50950 (http) with context path ''
+2023-08-23 15:32:18.253  INFO 12900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:32:18.273  INFO 12900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:32:18.307  INFO 12900 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:32:18.470  INFO 12900 --- [main] c.e.I.CustomerControllerIntegrationTest  : Started CustomerControllerIntegrationTest in 6.006 seconds (JVM running for 21.108)
+2023-08-23 15:32:18.880  INFO 12900 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 15:32:18.880  INFO 12900 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-23 15:32:18.882  INFO 12900 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-08-23 15:32:19.024  INFO 12900 --- [http-nio-auto-1-exec-1] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:32:19.039  INFO 12900 --- [http-nio-auto-1-exec-1] c.e.controller.CustomerController        : Created customer with ID: 1
+2023-08-23 15:32:19.150  INFO 12900 --- [http-nio-auto-1-exec-2] c.e.serviceImpl.CustomerServiceImpl      : Updating customer. Customer ID: 1
+2023-08-23 15:32:19.175  INFO 12900 --- [http-nio-auto-1-exec-2] c.e.controller.CustomerController        : Updated customer with ID: 1
+2023-08-23 15:32:19.221  INFO 12900 --- [http-nio-auto-1-exec-3] c.e.controller.CustomerController        : Deleted customer with ID: 1
+2023-08-23 15:32:19.270  INFO 12900 --- [http-nio-auto-1-exec-4] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:32:19.279  INFO 12900 --- [http-nio-auto-1-exec-4] c.e.controller.CustomerController        : Created customer with ID: 2
+2023-08-23 15:32:19.302  INFO 12900 --- [http-nio-auto-1-exec-5] c.e.serviceImpl.CustomerServiceImpl      : Retrieving customer by ID: 2
+2023-08-23 15:32:19.303  INFO 12900 --- [http-nio-auto-1-exec-5] c.e.controller.CustomerController        : Retrieved customer by ID: 2
+2023-08-23 15:32:19.331  INFO 12900 --- [http-nio-auto-1-exec-6] c.e.controller.CustomerController        : Deleted customer with ID: 2
+2023-08-23 15:32:19.356  INFO 12900 --- [http-nio-auto-1-exec-7] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:32:19.362  INFO 12900 --- [http-nio-auto-1-exec-7] c.e.controller.CustomerController        : Created customer with ID: 3
+2023-08-23 15:32:19.389  INFO 12900 --- [http-nio-auto-1-exec-8] c.e.serviceImpl.CustomerServiceImpl      : Calculating bill for customer. Customer ID: 3, Bill Amount: 500.0
+2023-08-23 15:32:19.390  INFO 12900 --- [http-nio-auto-1-exec-8] c.e.controller.CustomerController        : Calculated bill for customer with ID: 3
+2023-08-23 15:32:23.809  INFO 12900 --- [http-nio-auto-1-exec-9] c.e.controller.CustomerController        : Deleted customer with ID: 3
+2023-08-23 15:32:25.825  INFO 12900 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:32:25.828  INFO 12900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23 15:32:25.831  INFO 12900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:33:44.976  INFO 832 --- [main] c.e.I.CustomerControllerIntegrationTest  : Starting CustomerControllerIntegrationTest using Java 17.0.8 on GEMGN-210255 with PID 832 (started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:33:44.978 DEBUG 832 --- [main] c.e.I.CustomerControllerIntegrationTest  : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:33:44.978  INFO 832 --- [main] c.e.I.CustomerControllerIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:33:45.701  INFO 832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:33:45.782  INFO 832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:33:46.521  INFO 832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-08-23 15:33:46.534  INFO 832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:33:46.534  INFO 832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:33:46.648  INFO 832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:33:46.648  INFO 832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1645 ms
+2023-08-23 15:33:46.950  INFO 832 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:33:46.952  INFO 832 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:33:46.953  INFO 832 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:33:46.967  INFO 832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:33:47.152  INFO 832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:33:47.168  INFO 832 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:50970/testdb (PostgreSQL 15.4)
+2023-08-23 15:33:47.199  INFO 832 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:33:47.204  INFO 832 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.016s)
+2023-08-23 15:33:47.221  INFO 832 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:33:47.282  INFO 832 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:33:47.294  INFO 832 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:33:47.326  INFO 832 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:33:47.342  INFO 832 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.073s)
+2023-08-23 15:33:47.455  INFO 832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:33:47.511  INFO 832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:33:47.684  INFO 832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:33:47.789  INFO 832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:33:48.453  INFO 832 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:33:48.465  INFO 832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:33:49.334  WARN 832 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:33:49.570  INFO 832 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:33:50.157  INFO 832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50983 (http) with context path ''
+2023-08-23 15:33:50.158  INFO 832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:33:50.181  INFO 832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:33:50.213  INFO 832 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:33:50.362  INFO 832 --- [main] c.e.I.CustomerControllerIntegrationTest  : Started CustomerControllerIntegrationTest in 5.726 seconds (JVM running for 19.851)
+2023-08-23 15:33:50.730  INFO 832 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 15:33:50.730  INFO 832 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-23 15:33:50.731  INFO 832 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-08-23 15:33:50.859  INFO 832 --- [http-nio-auto-1-exec-1] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:33:50.874  INFO 832 --- [http-nio-auto-1-exec-1] c.e.controller.CustomerController        : Created customer with ID: 1
+2023-08-23 15:33:50.982  INFO 832 --- [http-nio-auto-1-exec-2] c.e.serviceImpl.CustomerServiceImpl      : Updating customer. Customer ID: 1
+2023-08-23 15:33:51.002  INFO 832 --- [http-nio-auto-1-exec-2] c.e.controller.CustomerController        : Updated customer with ID: 1
+2023-08-23 15:33:51.041  INFO 832 --- [http-nio-auto-1-exec-3] c.e.controller.CustomerController        : Deleted customer with ID: 1
+2023-08-23 15:33:51.078  INFO 832 --- [http-nio-auto-1-exec-4] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:33:51.086  INFO 832 --- [http-nio-auto-1-exec-4] c.e.controller.CustomerController        : Created customer with ID: 2
+2023-08-23 15:33:51.115  INFO 832 --- [http-nio-auto-1-exec-5] c.e.serviceImpl.CustomerServiceImpl      : Retrieving customer by ID: 2
+2023-08-23 15:33:51.115  INFO 832 --- [http-nio-auto-1-exec-5] c.e.controller.CustomerController        : Retrieved customer by ID: 2
+2023-08-23 15:33:51.149  INFO 832 --- [http-nio-auto-1-exec-6] c.e.controller.CustomerController        : Deleted customer with ID: 2
+2023-08-23 15:33:51.171  INFO 832 --- [http-nio-auto-1-exec-7] c.e.serviceImpl.CustomerServiceImpl      : Customer saved successfully. Customer ID: null
+2023-08-23 15:33:51.176  INFO 832 --- [http-nio-auto-1-exec-7] c.e.controller.CustomerController        : Created customer with ID: 3
+2023-08-23 15:33:51.208  INFO 832 --- [http-nio-auto-1-exec-8] c.e.serviceImpl.CustomerServiceImpl      : Calculating bill for customer. Customer ID: 3, Bill Amount: 500.0
+2023-08-23 15:33:51.208  INFO 832 --- [http-nio-auto-1-exec-8] c.e.controller.CustomerController        : Calculated bill for customer with ID: 3
+2023-08-23 15:33:55.293  INFO 832 --- [http-nio-auto-1-exec-9] c.e.controller.CustomerController        : Deleted customer with ID: 3
+2023-08-23 15:33:57.315  INFO 832 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:33:57.317  INFO 832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-23 15:33:57.321  INFO 832 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-08-23 15:34:17.120  INFO 14576 --- [restartedMain] e.ElectricityManagementSystemApplication : Starting ElectricityManagementSystemApplication using Java 17.0.8 on GEMGN-210255 with PID 14576 (C:\Users\sanyam.bansal\Desktop\Electricity_Management_System\target\classes started by Sanyam.Bansal in C:\Users\sanyam.bansal\Desktop\Electricity_Management_System)
+2023-08-23 15:34:17.121 DEBUG 14576 --- [restartedMain] e.ElectricityManagementSystemApplication : Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-23 15:34:17.122  INFO 14576 --- [restartedMain] e.ElectricityManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2023-08-23 15:34:17.158  INFO 14576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 15:34:17.158  INFO 14576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 15:34:17.931  INFO 14576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 15:34:17.994  INFO 14576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2023-08-23 15:34:18.526  INFO 14576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2023-08-23 15:34:18.534  INFO 14576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-23 15:34:18.535  INFO 14576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-08-23 15:34:18.636  INFO 14576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-23 15:34:18.637  INFO 14576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1479 ms
+2023-08-23 15:34:18.765  INFO 14576 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.17.0 by Redgate
+2023-08-23 15:34:18.766  INFO 14576 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-23 15:34:18.766  INFO 14576 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : 
+2023-08-23 15:34:18.777  INFO 14576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-23 15:34:19.015  INFO 14576 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-23 15:34:19.035  INFO 14576 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/ems (PostgreSQL 15.4)
+2023-08-23 15:34:19.102  INFO 14576 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-08-23 15:34:19.117  INFO 14576 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.034s)
+2023-08-23 15:34:19.177  INFO 14576 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-08-23 15:34:19.823  INFO 14576 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-08-23 15:34:19.833  INFO 14576 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - Create Supplier"
+2023-08-23 15:34:19.968  INFO 14576 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "2 - Add Supplier"
+2023-08-23 15:34:20.003  INFO 14576 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v2 (execution time 00:00.204s)
+2023-08-23 15:34:20.104  INFO 14576 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 15:34:20.151  INFO 14576 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 15:34:20.274  INFO 14576 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 15:34:20.377  INFO 14576 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-08-23 15:34:21.323  INFO 14576 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 15:34:21.335  INFO 14576 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 15:34:21.964  WARN 14576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-23 15:34:22.111  INFO 14576 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-08-23 15:34:22.309  INFO 14576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-23 15:34:22.526  INFO 14576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2023-08-23 15:34:22.527  INFO 14576 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-08-23 15:34:22.545  INFO 14576 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-08-23 15:34:22.585  INFO 14576 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-08-23 15:34:22.746  INFO 14576 --- [restartedMain] e.ElectricityManagementSystemApplication : Started ElectricityManagementSystemApplication in 6.065 seconds (JVM running for 6.915)
