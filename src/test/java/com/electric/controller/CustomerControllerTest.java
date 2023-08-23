@@ -16,9 +16,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
 import com.electric.entities.Customer;
 import com.electric.service.CustomerService;
+import com.electric.service.EmailService;
 import com.electric.service.MeterService;
 
 @SpringBootTest
@@ -29,6 +31,9 @@ public class CustomerControllerTest {
 
 	@Mock
 	private MeterService meterService;
+	
+	@Mock
+	private EmailService emailService;
 
 	@InjectMocks
 	private CustomerController customerController;
@@ -48,9 +53,9 @@ public class CustomerControllerTest {
 
 		when(customerService.saveCustomer(customer)).thenReturn(customer);
 
-		String response = customerController.createCustomer(customer);
+		ResponseEntity<String> response = customerController.createCustomer(customer);
 
-		assertEquals("The ID of the customer is: 1", response);
+		assertEquals("The ID of the customer is: 1", response.getBody());
 
 		verify(customerService, times(1)).saveCustomer(any(Customer.class));
 	}
@@ -82,10 +87,10 @@ public class CustomerControllerTest {
 
 		when(customerService.getCustomerById(customerId)).thenReturn(sampleCustomer);
 
-		Customer result = customerController.getCustomer(customerId);
+		ResponseEntity<Customer> result = customerController.getCustomer(customerId);
 
-		assertEquals(customerId, result.getCustomerId());
-		assertEquals(sampleCustomer.getCustomerName(), result.getCustomerName());
+		assertEquals(customerId, result.getBody().getCustomerId());
+		assertEquals(sampleCustomer.getCustomerName(), result.getBody().getCustomerName());
 
 		verify(customerService, times(1)).getCustomerById(customerId);
 
@@ -136,9 +141,9 @@ public class CustomerControllerTest {
 
 		when(customerService.updateCustomer(updatedCustomer, 1L)).thenReturn(updatedCustomer);
 
-		Customer response = customerController.updateCustomer(updatedCustomer, 1L);
+		ResponseEntity<Customer> response = customerController.updateCustomer(updatedCustomer, 1L);
 
-		assertEquals(updatedCustomer.getCustomerAddress(), response.getCustomerAddress());
+		assertEquals(updatedCustomer.getCustomerAddress(), response.getBody().getCustomerAddress());
 
 	}
 
@@ -151,15 +156,20 @@ public class CustomerControllerTest {
 		customer.setCustomerId(1L);
 		customer.setCustomerName("John Dao");
 		customer.setLastReading(100);
+		customer.setEmail("john02@gmail.com");
 
-		String expectedString = "the previous reading was:" + customer.getLastReading() + "\ncurrent reading is "
-				+ currentReading + "\ntotal bill amount is 300";
+//		String expectedString = "the previous reading was:" + customer.getLastReading() + "\ncurrent reading is "
+//				+ currentReading + "\ntotal bill amount is 300";
+		String expectedString = "Bill calculated and details sent to your respective email.";
 
 		when(customerService.calculateBillOfCustomer(1L, currentReading)).thenReturn(expectedString);
+		when(customerService.getCustomerEmailById(1L)).thenReturn(customer.getEmail());
+		
 
-		String response = customerController.calculateBill(1L, 200);
 
-		assertEquals(expectedString, response);
+		ResponseEntity<String> response = customerController.calculateBill(1L, 200);
+
+		assertEquals(expectedString, response.getBody());
 
 		verify(customerService, times(1)).calculateBillOfCustomer(1L, 200);
 	}
@@ -184,9 +194,9 @@ public class CustomerControllerTest {
 	@Test
 	public void testDeleteCustomer() {
 
-		String response = customerController.deleteCustomer(1L);
+		ResponseEntity<String> response = customerController.deleteCustomer(1L);
 
-		assertEquals("Deleted Successfully", response);
+		assertEquals("Deleted Successfully", response.getBody());
 
 		verify(customerService, times(1)).deleteCustomerById(1L);
 	}

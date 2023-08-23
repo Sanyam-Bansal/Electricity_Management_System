@@ -166,14 +166,15 @@ public class CustomerServiceImplTest {
 		customer.setCustomerId(1L);
 		customer.setCustomerName("John Doe");
 		customer.setCustomerAddress("123 Main St");
+		customer.setEmail("john02@gmail.com");
 		Meter meter = new Meter(1L, 100, 1000, null);
 		Supplier supplier = new Supplier(1L, "ABC Power", "Urban", null);
 		Customer customer2 = new Customer(2L, "Jane Smith", "456 Elm St", LocalDate.parse("2023-09-09"), 0, 100, 0,
-				meter, supplier);
+				"jane02@gmail.com", meter, supplier);
 		customers.add(customer);
 		customers.add(customer2);
 
-		when(customerRepository.findAll()).thenReturn(customers);
+		when(customerRepository.findByNameSorted()).thenReturn(customers);
 
 		List<Customer> result = customerService.getAllCustomers();
 
@@ -183,6 +184,33 @@ public class CustomerServiceImplTest {
 		assertEquals("123 Main St", result.get(0).getCustomerAddress());
 		assertEquals("Jane Smith", result.get(1).getCustomerName());
 		assertEquals("456 Elm St", result.get(1).getCustomerAddress());
+	}
+
+	@Test
+	public void testGetCustomerEmailById_Found() {
+		long customerId = 1L;
+		String expectedEmail = "test@example.com";
+
+		Customer customer = new Customer();
+		customer.setEmail(expectedEmail);
+
+		when(customerRepository.findById(customerId)).thenReturn(Optional.of(customer));
+
+		String actualEmail = customerService.getCustomerEmailById(customerId);
+
+		assertEquals(expectedEmail, actualEmail);
+	}
+
+	@Test
+	public void testGetCustomerEmailById_NotFound() {
+		long customerId = 1L;
+
+		when(customerRepository.findById(customerId)).thenReturn(Optional.empty());
+
+		assertThrows(NoSuchElementException.class, () -> {
+			customerService.getCustomerEmailById(customerId);
+		});
+
 	}
 
 	@Test

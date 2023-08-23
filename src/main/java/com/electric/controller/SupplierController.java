@@ -47,9 +47,10 @@ public class SupplierController {
 	@PostMapping
 	@ApiOperation(value = "Create a new supplier", notes = "Creates a new supplier entity.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Supplier created successfully") })
-	public Supplier createSupplier(@Valid @RequestBody Supplier supplier) {
+	public ResponseEntity<Supplier> createSupplier(@Valid @RequestBody Supplier supplier) {
 		logger.info("Creating a new supplier");
-		return supplierService.saveSupplier(supplier);
+		Supplier supplier1 = supplierService.saveSupplier(supplier);
+		return new ResponseEntity<>(supplier1, HttpStatus.OK);
 	}
 
 	/**
@@ -64,12 +65,12 @@ public class SupplierController {
 	@ApiOperation(value = "Update a supplier", notes = "Updates an existing supplier entity.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Supplier updated successfully"),
 			@ApiResponse(code = 404, message = "Supplier not found") })
-	public Supplier updateSupplier(@PathVariable Long supplierId, @RequestBody Supplier updatedSupplier)
+	public ResponseEntity<Supplier> updateSupplier(@PathVariable Long supplierId, @RequestBody Supplier updatedSupplier)
 			throws NoSuchElementException {
-//		return supplierService.updateSupplier(supplierId, updatedSupplier);
 		try {
 			logger.info("Updating supplier with ID: {}", supplierId);
-			return supplierService.updateSupplier(supplierId, updatedSupplier);
+			Supplier updaSupplier = supplierService.updateSupplier(supplierId, updatedSupplier);
+			return new ResponseEntity<>(updaSupplier, HttpStatus.OK);
 		} catch (NoSuchElementException e) {
 			logger.error("Supplier not found with ID: {}", supplierId);
 			throw e;
@@ -126,12 +127,11 @@ public class SupplierController {
 	@ApiOperation(value = "Get supplier by ID", notes = "Retrieves a specific supplier by its ID.")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Supplier retrieved successfully"),
 			@ApiResponse(code = 404, message = "Supplier not found") })
-	public Supplier getBySupplierId(@PathVariable Long supplierId) throws NoSuchElementException {
-//		System.out.println(supplierId);
-//		return supplierService.getSupplierById(supplierId);
+	public ResponseEntity<Supplier> getBySupplierId(@PathVariable Long supplierId) throws NoSuchElementException {
 		try {
 			logger.info("Retrieving supplier by ID: {}", supplierId);
-			return supplierService.getSupplierById(supplierId);
+			Supplier supplier = supplierService.getSupplierById(supplierId);
+			return new ResponseEntity<>(supplier, HttpStatus.OK);
 		} catch (NoSuchElementException e) {
 			logger.error("Supplier not found with ID: {}", supplierId);
 			throw e;

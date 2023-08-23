@@ -52,11 +52,11 @@ public class SupplierControllerTest {
 
 		when(supplierService.saveSupplier(supplier)).thenReturn(supplier);
 
-		Supplier createdSupplier = supplierController.createSupplier(supplier);
+		ResponseEntity<Supplier> createdSupplier = supplierController.createSupplier(supplier);
 
-		assertEquals(supplier.getSupplierId(), createdSupplier.getSupplierId());
-		assertEquals(supplier.getSupplierName(), createdSupplier.getSupplierName());
-		assertEquals(supplier.getUrbanRural(), createdSupplier.getUrbanRural());
+		assertEquals(supplier.getSupplierId(), createdSupplier.getBody().getSupplierId());
+		assertEquals(supplier.getSupplierName(), createdSupplier.getBody().getSupplierName());
+		assertEquals(supplier.getUrbanRural(), createdSupplier.getBody().getUrbanRural());
 
 		verify(supplierService, times(1)).saveSupplier(supplier);
 	}
@@ -70,10 +70,10 @@ public class SupplierControllerTest {
 
 		when(supplierService.updateSupplier(supplierId, updatedSupplier)).thenReturn(updatedSupplier);
 
-		Supplier updated = supplierController.updateSupplier(supplierId, updatedSupplier);
+		ResponseEntity<Supplier> updated = supplierController.updateSupplier(supplierId, updatedSupplier);
 
-		assertEquals(updatedSupplier.getSupplierId(), updated.getSupplierId());
-		assertEquals(updatedSupplier.getSupplierName(), updated.getSupplierName());
+		assertEquals(updatedSupplier.getSupplierId(), updated.getBody().getSupplierId());
+		assertEquals(updatedSupplier.getSupplierName(), updated.getBody().getSupplierName());
 
 		verify(supplierService, times(1)).updateSupplier(supplierId, updatedSupplier);
 	}
@@ -169,9 +169,9 @@ public class SupplierControllerTest {
 
 		when(supplierService.getSupplierById(supplierId)).thenReturn(supplier);
 
-		Supplier result = supplierController.getBySupplierId(supplierId);
+		ResponseEntity<Supplier> result = supplierController.getBySupplierId(supplierId);
 
-		assertEquals(supplier, result);
+		assertEquals(supplier, result.getBody());
 
 		verify(supplierService, times(1)).getSupplierById(supplierId);
 	}

@@ -21,5 +21,7 @@ public interface CustomerService {
 	String calculateBillOfCustomer(long cId, int currentReading);
 
 	List<Customer> getCustomersBySupplierId(Long supplierId);
+	
+	public String getCustomerEmailById(long cId);
 
 }

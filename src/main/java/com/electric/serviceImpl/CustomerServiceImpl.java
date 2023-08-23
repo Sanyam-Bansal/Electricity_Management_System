@@ -3,6 +3,7 @@ package com.electric.serviceImpl;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -68,7 +69,7 @@ public class CustomerServiceImpl implements CustomerService {
 	 */
 	public List<Customer> getAllCustomers() {
 //		return customerRepository.findAll();
-		List<Customer> customers = customerRepository.findAll();
+		List<Customer> customers = customerRepository.findByNameSorted();
 		logger.info("Retrieving all customers. Total count: {}", customers.size());
 		return customers;
 	}
@@ -81,8 +82,6 @@ public class CustomerServiceImpl implements CustomerService {
 	 * @throws NoSuchElementException If no customer is found with the specified ID.
 	 */
 	public Customer getCustomerById(Long customerId) throws NoSuchElementException {
-//		return customerRepository.findById(customerId)
-//				.orElseThrow(() -> new NoSuchElementException("Customer not found with ID: " + customerId));
 		try {
 			Customer customer = customerRepository.findById(customerId)
 					.orElseThrow(() -> new NoSuchElementException("Customer not found with ID: " + customerId));
@@ -91,6 +90,23 @@ public class CustomerServiceImpl implements CustomerService {
 		} catch (NoSuchElementException e) {
 			logger.error("Error occurred while retrieving customer by ID: {}", e.getMessage());
 			throw e;
+		}
+	}
+
+	/**
+	 * Retrieves the email address of a customer based on the provided customer ID.
+	 *
+	 * @param cId The ID of the customer.
+	 * @return The email address of the customer.
+	 * @throws NoSuchElementException If no customer is found with the specified ID.
+	 */
+	public String getCustomerEmailById(long cId) {
+		Optional<Customer> optionalCustomer = customerRepository.findById(cId);
+		if (optionalCustomer.isPresent()) {
+			Customer customer = optionalCustomer.get();
+			return customer.getEmail();
+		} else {
+			throw new NoSuchElementException("Customer not found with ID: " + cId);
 		}
 	}
 
@@ -138,6 +154,9 @@ public class CustomerServiceImpl implements CustomerService {
 			}
 			if (customer.getSupplier() != null) {
 				dbCustomer.setSupplier(customer.getSupplier());
+			}
+			if (customer.getEmail() != null) {
+				dbCustomer.setEmail(customer.getEmail());
 			}
 			logger.info("Updating customer. Customer ID: {}", cId);
 			return customerRepository.save(dbCustomer);

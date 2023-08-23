@@ -73,11 +73,11 @@ public class MeterControllerTest {
 
 		when(meterService.saveMeter(meter)).thenReturn(meter);
 
-		Meter createdMeter = meterController.createMeter(meter);
+		ResponseEntity<Meter> createdMeter = meterController.createMeter(meter);
 
 		assertNotNull(createdMeter);
-		assertEquals(meter.getMeterId(), createdMeter.getMeterId());
-		assertEquals(meter.getMinimumBillAmount(), createdMeter.getMinimumBillAmount());
+		assertEquals(meter.getMeterId(), createdMeter.getBody().getMeterId());
+		assertEquals(meter.getMinimumBillAmount(), createdMeter.getBody().getMinimumBillAmount());
 	}
 
 	@Test
@@ -89,11 +89,11 @@ public class MeterControllerTest {
 
 		when(meterService.updateMeter(meterId, updatedMeter)).thenReturn(updatedMeter);
 
-		Meter updated = meterController.updateMeter(meterId, updatedMeter);
+		ResponseEntity<Meter> updated = meterController.updateMeter(meterId, updatedMeter);
 
 		assertNotNull(updated);
-		assertEquals(updatedMeter.getMinimumBillAmount(), updated.getMinimumBillAmount());
-		assertEquals(updatedMeter.getLoadb(), updated.getLoadb());
+		assertEquals(updatedMeter.getMinimumBillAmount(), updated.getBody().getMinimumBillAmount());
+		assertEquals(updatedMeter.getLoadb(), updated.getBody().getLoadb());
 	}
 
 	@Test
@@ -115,9 +115,9 @@ public class MeterControllerTest {
 
 		String expectedMessage = "Meter with id: " + meterId + " is successfully deleted";
 
-		String actualMessage = meterController.deleteMeter(meterId);
+		ResponseEntity<String> actualMessage = meterController.deleteMeter(meterId);
 
-		assertEquals(expectedMessage, actualMessage);
+		assertEquals(expectedMessage, actualMessage.getBody());
 		verify(meterService, times(1)).deleteMeter(meterId);
 	}
 
